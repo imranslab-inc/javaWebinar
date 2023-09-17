@@ -1,32 +1,28 @@
-# Module 4
+# `Module 4`
 
 This module is all about `Java` threads
 
-## `Java` Multi Threadings
+## `Java Multi Threading Contents:`
 
-We are going to cover following topics in multi threadings:
+We are going to cover following topics in multi threading:
 
-- Module4.1 Java Thread And Runnable
-- Module4.2 Java Thread Sleep
-- Module4.3 Java Thread Join
-- Module4.4 Java Thread States
-- Module4.5 Java Thread Wait Notify And Notifyall
-- Module4.6 Thread Safety And Synchronization
-- Module4.7 Java Exception In Thread Main
-- Module4.8 Thread Safety In Singleton Class
-- Module4.9 Daemon Thread In Java
-- Module4.10 Java Thread Local
-- Module4.11 Java Thread Dump
-- Module4.12 How To Analyze Deadlock In Java
-- Module4.13 Java Timer Thread
-- Module4.14 Java Producer Consumer Problem
-- Module4.15 Java Thread Pool
-- Module4.16 Java Callable Future
-- Module4.17 Java Futuretask Example
-
-### Prerequisites
-
-No Prerequisites
+- Module 4.1 Java Thread And Runnable
+- Module 4.2 Java Thread Sleep
+- Module 4.3 Java Thread Join
+- Module 4.4 Java Thread States
+- Module 4.5 Java Thread Wait Notify And Notifyall
+- Module 4.6 Thread Safety And Synchronization
+- Module 4.7 Java Exception In Thread Main
+- Module 4.8 Thread Safety In Singleton Class
+- Module 4.9 Daemon Thread In Java
+- Module 4.10 Java Thread Local
+- Module 4.11 Java Thread Dump
+- Module 4.12 How To Analyze Deadlock In Java
+- Module 4.13 Java Timer Thread
+- Module 4.14 Java Producer Consumer Problem
+- Module 4.15 Java Thread Pool
+- Module 4.16 Java Callable Future
+- Module 4.17 Java Futuretask Example
 
 ## Built With
 
