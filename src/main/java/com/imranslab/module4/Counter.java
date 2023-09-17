@@ -1,6 +1,12 @@
 package com.imranslab.module4;
 
 public class Counter implements Runnable {
+    /*
+    Implementing 'Runnable' interface: The 'Runnable' interface represents a task that can be executed asynchronously.
+    This approach is more flexible than extending 'Thread' because your class can still extend other classes, since
+    Java allows implementing multiple interfaces.
+     */
+
     private String name;
     private int limit;
 
