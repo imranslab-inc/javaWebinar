@@ -50,7 +50,7 @@ public class ThreadSafetyAndSynchronization {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main (String[] args) {
         ThreadSafetyAndSynchronization.BankAccount account = new ThreadSafetyAndSynchronization.BankAccount(1000); // Initial balance is 1000
 
         // Two threads trying to withdraw and deposit money concurrently

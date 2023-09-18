@@ -27,7 +27,7 @@ public class Counter implements Runnable {
         Thread counter1 = new Thread(new Counter("Counter1", 5));
         Thread counter2 = new Thread(new Counter("Counter2", 5));
 
-        // Creating a watcher thread
+//         Creating a watcher thread
         Thread watcher = new Thread(() -> {
             try {
                 System.out.println("Watcher: Waiting for counters to finish.");
