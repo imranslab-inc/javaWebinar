@@ -1,6 +1,12 @@
 package com.imranslab.module4;
 
+/*
+* @author: Imranul Islam
+* @since: September 17, 2023
+* */
+
 public class ThreadJoin {
+
     public static void main(String[] args) {
         Thread myThread = new Thread(new Runnable() {
             // A new thread 'myThread' is created, and its 'run()' method is overriden to include a loop that prints
