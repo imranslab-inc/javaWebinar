@@ -33,14 +33,18 @@ public class ExceptionInThreadMain {
         {
             Thread thread2 = new Thread(()->
             {
-                try{
                     // Simulating exception
                     throw new ArithmeticException("Division by zero");
+            }, "Thread-2");
 
-                } catch (ArithmeticException e){
-                    System.out.println(Thread.currentThread().getName() + " caught exception: " + e.getMessage());
+            thread2.setUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler(){
+
+                @Override
+                public void uncaughtException(Thread t, Throwable e) {
+                    System.out.println(t.getName() + " caught exception: " + e.getMessage());
                 }
-            }, "Thread-1");
+            });
+
             thread2.start();
         }
     }
