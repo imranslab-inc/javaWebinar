@@ -2,6 +2,7 @@ package com.imranslab.module4;
 
 public class ThreadWaitNotifyAndNotifyAll {
     static class Message {
+        // Message class is used to hold a string message that will be shared between 'Waiter' and 'Notifier' threads.
         private String msg;
 
         public Message(String str) {
@@ -18,6 +19,7 @@ public class ThreadWaitNotifyAndNotifyAll {
     }
 
     static class Waiter implements Runnable {
+        // The 'Waiter' thread waits for a notification by calling msg.wait() inside a synchronized block
         private final Message msg;
 
         public Waiter(Message m) {
@@ -39,6 +41,8 @@ public class ThreadWaitNotifyAndNotifyAll {
     }
 
     static class Notifier implements Runnable {
+        // The Notifier thread sets a new message and then calls 'msg.notify()' to wake up the waiting thread ('Waiter')
+        // When the 'Waiter' thread wakes up, it proceeds to execute the remaining lines of code after the 'wait()' call.
         private final Message msg;
 
         public Notifier(Message m) {
