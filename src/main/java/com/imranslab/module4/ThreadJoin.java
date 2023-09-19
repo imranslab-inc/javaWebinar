@@ -1,9 +1,13 @@
 package com.imranslab.module4;
 
+import com.ownership;
+
 /*
 * @author: Imranul Islam
 * @since: September 17, 2023
 * */
+
+@ownership(author = "Imranul Islam")
 
 public class ThreadJoin {
 
