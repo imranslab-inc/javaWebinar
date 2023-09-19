@@ -1,4 +1,10 @@
 package com.imranslab.module4;
+
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+
 /*
 * Exception handling in a multithreaded environment can be a bit tricky, as each thread runs independently of the
 * others. This means that a 'try-catch' block in the 'main' method will not catch exception thrown in other threads. In
@@ -55,5 +61,33 @@ public class ExceptionInThreadMain {
 
             thread2.start();
         }
+    }
+
+    public static class Example3{
+        /*
+        * If you are using an 'ExecutorService' to manage threads, you can use 'Future' objects to catch exceptions.
+        * In this example, we use 'future.get()' to retrieve the result of the computation. If an exception is thrown
+        * within the thread, it will be wrapped in an 'ExecutionException', which we can catch and handle.
+        *
+        * These are some ways to handle exceptions in a multithreaded environment in Java. Each method has its own pros
+        * and cons, so you should choose the one that best fits your specific needs.
+        * */
+
+       public static void main(String[] args){
+           ExecutorService executor = Executors.newSingleThreadExecutor();
+
+           Future<?> future = executor.submit(()-> {
+              // This will throw an exception
+              throw new IllegalStateException("Illegal state");
+           });
+
+           try{
+               future.get();
+           } catch (ExecutionException | InterruptedException e) {
+               Throwable cause = e.getCause();
+               System.out.println("Caught exception: " + cause.getMessage());
+           }
+           executor.shutdown();
+       }
     }
 }
