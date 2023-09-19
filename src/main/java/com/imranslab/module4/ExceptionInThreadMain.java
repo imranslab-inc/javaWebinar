@@ -29,6 +29,10 @@ public class ExceptionInThreadMain {
     }
 
     public static class Example2{
+        /*
+        * Another approach is to use 'Thread.UncaughtExceptionHandler', which is an interface that you can use to create
+        * a handler for uncaught exceptions for each Thread.
+        * */
         public static void main(String[] args)
         {
             Thread thread2 = new Thread(()->
@@ -37,7 +41,11 @@ public class ExceptionInThreadMain {
                     throw new ArithmeticException("Division by zero");
             }, "Thread-2");
 
-            thread2.setUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler(){
+                    // here, we set an 'UncaughtExceptionHandler' for 'thread2'. If 'thread2' throws an uncaught exception
+                    // the uncaughtException method of the handler will be invoked, allowing you to handle the exception
+                    // as you see fit.
+
+                    thread2.setUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler(){
 
                 @Override
                 public void uncaughtException(Thread t, Throwable e) {
